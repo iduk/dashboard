@@ -1,4 +1,2 @@
 
-# webpack starterkit
-
-Datagrid Test repo.
+# Datagrid Test repo.

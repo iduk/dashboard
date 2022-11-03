@@ -3,6 +3,7 @@ import Loading from '@/components/Loading'
 import styled from '@emotion/styled'
 import styles from './Home.module.scss'
 import classnames from 'classnames/bind'
+import DatagridTest from './DategridTest'
 const cx = classnames.bind(styles)
 
 const ThemeWrap = styled.div`
@@ -29,8 +30,6 @@ export function Home(): JSX.Element {
         <div className="container">
           <ThemeWrap>
             <h6>Theme Mode</h6>
-            <HomeContent />
-
             <section className="p-4 mt-lg-3 bg-gray-3">
               <div className="row">
                 <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
@@ -81,28 +80,15 @@ export function Home(): JSX.Element {
               </div>
             </section>
           </ThemeWrap>
+
+          <div>
+            <h4>mui DataGrid</h4>
+            <DatagridTest />
+          </div>
         </div>
       ) : (
         <Loading />
       )}
-    </>
-  )
-}
-
-function HomeContent() {
-  return (
-    <>
-      <h1>원투뜨리포퍼블퍼블</h1>
-      <p>
-        별빛이 이 가을 못 슬퍼하는 버리었습니다. 청춘이 강아지, 패, 계십니다.
-        남은 풀이 옥 내린 노새, 아름다운 못 봅니다.
-      </p>
-      <div className="mt-5 flex gap-2 justify-center">
-        <button className="btn btn-primary p-2 ">primary</button>
-        <button className="btn btn-secondary p-2">secondary</button>
-      </div>
-
-      <hr className="my-4" />
     </>
   )
 }

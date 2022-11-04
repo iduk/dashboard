@@ -8,6 +8,7 @@ Element validation & testing for dashboard.
 - Date/Time Picker
 - Calendar
 - Tooltip
+- ...
 
 #### Elements
 - Card Layout
@@ -17,3 +18,4 @@ Element validation & testing for dashboard.
 - Buttons
 - Modal
 - Alert
+- ...

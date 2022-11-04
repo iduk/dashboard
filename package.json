@@ -9,8 +9,7 @@
     "watch": "npx webpack --watch",
     "server": "node server.js",
     "start": "cross-env NODE_ENV=development webpack serve --open",
-    "start:prod": "cross-env NODE_ENV=production webpack serve --open",
-    "prod": "cross-env NODE_ENV=production webpack --mode=production",
+    "start:prod": "cross-env NODE_ENV=production webpack serve --mode=production --open",
     "build": "npx webpack",
     "deploy": "yarn prod && gh-pages -d dist",
     "lint": "eslint \"src/**/*.js\" --fix"

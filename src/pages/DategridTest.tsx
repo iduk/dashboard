@@ -103,16 +103,17 @@ const columns: GridColDef[] = [
     field: 'age',
     headerName: 'Age',
     type: 'number',
-    width: 90
+    width: 90,
+    editable: true
   },
   {
     field: 'fullName',
     headerName: 'Full name',
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
-    width: 160,
     valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`
+      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    editable: true
   }
 ]
 
@@ -132,7 +133,6 @@ export default function DataTable() {
   return (
     <div style={{ height: 400, width: '100%' }}>
       <StyledDataGrid
-        density="compact"
         rows={rows}
         columns={columns}
         pageSize={5}

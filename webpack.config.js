@@ -136,8 +136,12 @@ module.exports = (env, options) => {
             },
         template: './src/index.html',
         templateParameters: {
-          env: process.env.NODE_ENV === 'development' ? '🚧' : '✨'
+          env: process.env.NODE_ENV === 'development' ? '🚧' : '🌞'
         }
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
       })
     ],
     stats: {

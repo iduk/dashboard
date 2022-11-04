@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import styles from './Home.module.scss'
 import classnames from 'classnames/bind'
 import DatagridTest from './DategridTest'
+import { Chart } from './Chart'
 const cx = classnames.bind(styles)
 
 const ThemeWrap = styled.div`
@@ -80,6 +81,22 @@ export function Home(): JSX.Element {
               </div>
             </section>
           </ThemeWrap>
+
+          <div>
+            <h4>ChartJS</h4>
+            <div className="row">
+              <div className="col-lg-6 col-12">
+                <div style={{ border: '1px solid var(--gray-4)' }}>
+                  <Chart />
+                </div>
+              </div>
+              <div className="col-lg-6 col-12">
+                <div style={{ border: '1px solid var(--gray-4)' }}>
+                  <Chart />
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div>
             <h4>mui DataGrid</h4>

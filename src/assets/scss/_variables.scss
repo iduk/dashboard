@@ -14,6 +14,8 @@ $red: #ef233c;
 $gray: #8d99ae;
 $dark: #2b2d42;
 $light: #edf2f4;
+$black: #000;
+$white: #fff;
 
 $color-palette: (
   primary: $dark,
@@ -21,9 +23,11 @@ $color-palette: (
   success: $green,
   warning: $yellow,
   error: $red,
+  gray: $gray,
   dark: $dark,
   light: $light,
-  gray: $gray
+  black: $black,
+  white: $white,
 ) !default;
 
 $gray-100: #f8f9fa;

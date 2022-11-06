@@ -18,55 +18,66 @@ export default function Home(): JSX.Element {
   return (
     <>
       <div className="container">
+        <h3 className={cx('title')}>Grid</h3>
         <ThemeWrap>
-          <h6>Theme Mode</h6>
-          <section className="p-4 mt-lg-3 bg-gray-3">
+          <section className="mt-lg-3">
             <div className="row">
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
-                1
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-7">
-                2
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
-                3
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-7">
-                4
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
-                5
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-7">
-                6
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
-                7
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-7">
-                8
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
-                9
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-7">
-                10
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-6">
-                11
-              </span>
-              <span className="col-lg-1 col-md-3 col-sm-6 col-12 bg-gray-7">
-                12
-              </span>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
+              <div className="col-lg-1 col-md-3 col-sm-6 col-12">
+                <div className="bg-primary h-100">column</div>
+              </div>
             </div>
           </section>
 
-          <section className="p-4 mt-3">
+          <section className="mt-3">
             <div className="row">
-              <span className="col-lg-3 col-md-6 col-6 bg-gray-3">1</span>
-              <span className="col-lg-3 col-md-6 col-6 bg-gray-4">2</span>
-              <span className="col-lg-3 col-md-6 col-6 bg-gray-5">3</span>
-              <span className="col-lg-3 col-md-6 col-6 bg-gray-6">4</span>
+              <div className="col-lg-2 col-md-6 col-6">
+                <div className="bg-primary h-100">
+                  col-lg-2, col-md-6, col-6
+                </div>
+              </div>
+
+              <div className="col-auto">
+                <div className="bg-primary h-100">col-auto</div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 col-6">
+                <div className="bg-primary h-100">
+                  col-lg-4, col-md-6, col-6
+                </div>
+              </div>
             </div>
           </section>
         </ThemeWrap>

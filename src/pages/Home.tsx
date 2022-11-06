@@ -173,6 +173,10 @@ const dataArray2 = dataJson.labels.map((label) => ({
   y: faker.datatype.number({ min: 200, max: 1000 })
 }))
 
+
+let style = getComputedStyle(document.body)
+let BarColor = style.getPropertyValue('--gray-2')
+
 const LineChartData = {
   datasets: [
     // line 1
@@ -206,27 +210,26 @@ const LineChartData = {
 const BarChartData = {
   // labels: BarLabels,
   datasets: [
-    {
-      tension: 0,
-      pointRadius: 0,
-      pointHoverRadius: 3
-    },
     // line 1
     {
       data: dataArray1,
       backgroundColor: `rgba(239, 35, 60, 0.9)`,
       borderColor: `rgba(239, 35, 60, 1)`,
-      borderWidth: 2
+      borderWidth: 2,
+      barThickness: 12
     },
     // line 2
     {
       data: dataArray2,
-      backgroundColor: `rgba(43, 45, 66, 0.08)`,
-      borderColor: `rgba(43, 45, 66, 0.2)`,
-      borderWidth: 0
+      backgroundColor: BarColor,
+      borderColor: BarColor,
+      borderWidth: 0,
+      barThickness: 12
     }
   ]
 }
+
+
 
 const ThemeWrap = styled.div`
   padding: 2rem;

@@ -11,7 +11,9 @@ import styles from './Navbar.module.scss'
 import classnames from 'classnames/bind'
 const cx = classnames.bind(styles)
 
-interface Props {}
+interface Props {
+  className: string
+}
 
 interface NavlistProps {
   path: string
@@ -25,12 +27,12 @@ const navlist: NavlistProps[] = [
 ]
 
 export default function Navbar(props: any, {}: Props) {
-  const {} = props
+  const { className } = props
   const location = useLocation()
   const navigate = useNavigate()
 
   return (
-    <nav className={cx('navbar')}>
+    <nav className={cx('navbar', className)}>
       <Link to={'/'}>Admin Dashboard</Link>
       <ul className={cx('nav')}>
         {navlist.map((nav) => (

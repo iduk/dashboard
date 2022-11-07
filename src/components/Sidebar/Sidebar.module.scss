@@ -1,0 +1,22 @@
+
+.sidebar-wrapper {
+  background-color: var(--gray-2);
+  padding: 1rem;
+  position: sticky;
+  height: calc(100vh - 60px);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  &--items {
+    >a {
+      &.active {
+        color: red;
+      }
+    }
+    
+  }
+}

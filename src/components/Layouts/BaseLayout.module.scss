@@ -1,4 +1,23 @@
 // Base Layout Style
-.layout {
+.base-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 260px auto;
+  grid-template-rows: 60px auto;
+  grid-template-areas: 
+  'topnav topnav'
+  'sidebar contents';
+}
+
+.topnav   {
+  grid-area: topnav;
+  position: relative;
+}
+.sidebar  {
+  grid-area: sidebar;
+  position: relative;
+}
+.contents {
+  grid-area: contents;
   position: relative;
 }

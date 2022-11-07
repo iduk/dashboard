@@ -1,19 +1,20 @@
 import * as React from 'react'
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import styles from './BaseLayout.module.scss'
 import classnames from 'classnames/bind'
-import Navbar from '../Nav/Navbar'
 const cx = classnames.bind(styles)
+import Navbar from '../Nav/Navbar'
+import Sidebar from '../Sidebar/Sidebar'
+import Contents from '../Contents/Contents'
 
 export default function BaseLayout() {
   const location = useLocation()
 
   return (
-    <>
-      <Navbar />
-      <main className={cx('layout')}>
-        <Outlet />
-      </main>
-    </>
+    <div className={cx('base-layout')}>
+      <Navbar className={cx('topnav')} />
+      <Sidebar className={cx('sidebar')} />
+      <Contents className={cx('contents')} />
+    </div>
   )
 }

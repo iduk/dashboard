@@ -46,6 +46,36 @@ module.exports = (env, options) => {
         },
         // assets
         {
+          test: /\.less$/i,
+          use: [
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2,
+                sourceMap: true,
+                modules: {
+                  auto: true,
+                  localIdentName: isDev
+                    ? '[local]--[hash:base64:5]'
+                    : '[hash:base64:7]'
+                }
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: ['postcss-preset-env']
+                }
+              }
+            },
+            {
+              loader: 'less-loader'
+            }
+          ]
+        },
+        {
           test: /\.s[ac]ss$/i,
           use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -78,7 +108,7 @@ module.exports = (env, options) => {
               @import "./src/assets/scss/_variables.scss";
               `
               }
-            }
+            },
           ]
         },
         {
